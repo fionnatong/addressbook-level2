@@ -32,4 +32,9 @@ public class Contact {
                 || (other instanceof Contact // instanceof handles nulls
                 && this.value.equals(((Contact) other).value)); // state check
     }
+
+    @Override
+    public int hashCode() {
+        return value.hashCode();
+    }
 }

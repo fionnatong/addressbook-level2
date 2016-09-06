@@ -25,12 +25,6 @@ public class Email extends Contact {
         }
     }
 
-    @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
-
-
     public boolean isPrivate() {
         return isPrivate;
     }

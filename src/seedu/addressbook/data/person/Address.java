@@ -24,11 +24,6 @@ public class Address extends Contact {
         }
     }
 
-    @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
-
     public boolean isPrivate() {
         return isPrivate;
     }
