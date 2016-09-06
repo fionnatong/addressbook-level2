@@ -20,4 +20,9 @@ public class Contact {
     public static boolean isValidContactComponent(String test, String validationRegex) {
         return test.matches(validationRegex);
     }
+
+    @Override
+    public String toString() {
+        return value;
+    }
 }
