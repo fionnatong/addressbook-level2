@@ -35,29 +35,23 @@ public interface ReadOnlyPerson {
     /**
      * Formats the person as text, showing all contact details.
      */
-    default String getAsTextShowAll() {
+    default String getPrintableString(Printable... printables) {
         final StringBuilder builder = new StringBuilder();
         final String detailIsPrivate = "(private) ";
-        builder.append(getName())
-                .append(" Phone: ");
-        if (getPhone().isPrivate()) {
-            builder.append(detailIsPrivate);
-        }
-        builder.append(getPhone())
-                .append(" Email: ");
-        if (getEmail().isPrivate()) {
-            builder.append(detailIsPrivate);
-        }
-        builder.append(getEmail())
-                .append(" Address: ");
-        if (getAddress().isPrivate()) {
-            builder.append(detailIsPrivate);
-        }
-        builder.append(getAddress())
-                .append(" Tags: ");
+	
+	for (Printable p : printables) {
+	    builder.append(p.getPrintableString());
+	    if (printables.isPrivate()) {
+	        builder.append(detailIsPrivate);
+            }
+	    builder.append(" ");
+	}
+        
+	builder.append(" Tags: ");
         for (Tag tag : getTags()) {
             builder.append(tag);
         }
+
         return builder.toString();
     }
 
