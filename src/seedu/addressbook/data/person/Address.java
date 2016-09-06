@@ -23,8 +23,4 @@ public class Address extends Contact {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS);
         }
     }
-
-    public boolean isPrivate() {
-        return isPrivate;
-    }
 }

@@ -24,8 +24,4 @@ public class Email extends Contact {
             throw new IllegalValueException(MESSAGE_EMAIL_CONSTRAINTS);
         }
     }
-
-    public boolean isPrivate() {
-        return isPrivate;
-    }
 }

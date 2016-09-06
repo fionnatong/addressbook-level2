@@ -23,8 +23,4 @@ public class Phone extends Contact {
             throw new IllegalValueException(MESSAGE_PHONE_CONSTRAINTS);
         }
     }
-
-    public boolean isPrivate() {
-        return isPrivate;
-    }
 }
