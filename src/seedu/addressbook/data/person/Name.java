@@ -61,4 +61,12 @@ public class Name {
         return fullName.hashCode();
     }
 
+    /**
+     * Returns true if the other name is very similar to this name.
+     * Two names are considered similar if their full names are the same.
+     * The comparison of both full names will be case insensitive.
+     */
+    public boolean isSimilar(Name other) {
+        return this.fullName.toLowerCase().equals(other.fullName.toLowerCase());
+    }
 }
